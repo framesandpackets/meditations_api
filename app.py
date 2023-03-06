@@ -5,6 +5,8 @@ import random
 
 app = Flask(__name__)
 
+# stop flask from trying to sort keys
+app.config['JSON_SORT_KEYS'] = False
 
 def get_random_book():
     data = json.loads(meditations)
